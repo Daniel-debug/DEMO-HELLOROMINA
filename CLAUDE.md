@@ -21,9 +21,9 @@ Es una **propuesta de diseño**: una sola página HTML, sin frameworks, con todo
 | `hello-romina.html` | **Fuente única.** Aquí se edita todo. Es también lo que se publica como artifact de Claude. |
 | `index.html` | **Generado** por `build.sh`. Versión independiente para el dominio real (con `<head>`, metas, favicon). No editar a mano. |
 | `build.sh` | Envuelve `hello-romina.html` en un documento completo y genera `index.html`. |
-| `media/romina-reel-540.mp4` | Reel de "Hello, soy Romina" sin audio, 540p VP9 (12 MB). Lo usa la página. |
-| `media/romina-reel.mp4` | Mismo reel, 720p H.264 **con audio** (18 MB). Respaldo para iPhone viejos en el sitio real. |
-| `media/romina-reel-audio.mp4` | Solo la pista de audio del reel (500 KB). Suena con el botón / al entrar a la sección. |
+| `media/romina-reel-540.mp4` | Reel de "Hello, soy Romina" sin audio, 540p VP9 (12 MB). Respaldo sin audio; ya no lo usa la página. |
+| `media/romina-reel.mp4` | Mismo reel, 720p H.264 **con audio** (18 MB). Fuente activa del reel en todos los navegadores, con audio integrado. |
+| `media/romina-reel-audio.mp4` | Solo la pista de audio del reel (500 KB). Respaldo; ya no se reproduce por separado. |
 | `docs/` | Contexto detallado: marca, estructura, diseño, pendientes e historial. |
 | `.claude/launch.json` | Configuración para la vista previa local de Claude Code (opcional). |
 
@@ -52,7 +52,7 @@ Las fotos están **incrustadas** en el HTML como `data:` URIs (por eso el archiv
 14. Respetar `prefers-reduced-motion` en animaciones nuevas.
 
 ### Video y audio
-15. Los navegadores **no dejan sonar una página sin un toque previo** del usuario (el scroll no cuenta). No intentar saltarse esa regla; el código ya desbloquea el audio con el primer toque y muestra "Toca para escuchar".
+15. Los navegadores **no dejan sonar una página sin un toque previo** del usuario (el scroll no cuenta). No intentar saltarse esa regla; el código activa el audio integrado al tocar en la sección o el botón y muestra "Toca para escuchar" si el navegador lo bloquea.
 16. El artifact de Claude acepta archivos de hasta **15 MB** y no acepta `.m4a`; por eso el audio va en `.mp4`.
 
 ### Mantener este contexto

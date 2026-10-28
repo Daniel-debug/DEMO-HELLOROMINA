@@ -2,6 +2,11 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 23
+
+- El reel usa el MP4 existente con audio integrado. Se elimina el reproductor de audio separado y las correcciones de posición que podían causar cortes. El sonido se activa con un toque y se conserva la pausa al salir de la sección.
+- Pendiente confirmar reproducción continua en Safari de un dispositivo real.
+
 ## 2026-10-28 · Versión 22
 
 - Se agrega «Versión 22» al footer para identificar la revisión publicada. La revisión anterior estaba documentada como versión 21, pero no mostraba su número en la página.
