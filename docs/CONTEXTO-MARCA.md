@@ -61,6 +61,6 @@ Historias destacadas de Instagram: "Marcas" y "Sociales" (requieren sesión inic
 | Sesión familiar | Historia 5 y portafolio | Post propio |
 | Pareja en parque / pareja con cactus | Portafolio | @anglc.marina / @sunimodo |
 | Mensaje de agradecimiento | Sección Clientes | Post propio |
-| Reel "Hello, soy Romina" | Sección Sobre mí | instagram.com/p/DW-Jsp8DNtn |
+| Reel "Hello, soy Romina" | Sección Sobre mí | instagram.com/p/DW-Jsp8DNtn · subido a Cloudinary (cuenta `dui0ludm`) |
 
 Las fotos vienen de Instagram a ~640 px. Para la versión final conviene pedir originales y confirmar permiso de las marcas que aparecen.

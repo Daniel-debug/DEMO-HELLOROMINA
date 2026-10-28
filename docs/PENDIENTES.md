@@ -14,13 +14,15 @@ Marca con `[x]` lo que se resuelva y mueve el detalle a `HISTORIAL.md`.
 - [ ] Fotos originales en buena resolución (las actuales son de Instagram a ~640 px).
 - [ ] Fotos de Negai Restaurant y Nieves Toto (solo aparecen en la lista de marcas).
 - [ ] Capturas de sus historias destacadas "Marcas" y "Sociales" para el teléfono del inicio.
-- [x] Bajar el peso del reel: ahora se sirve desde Cloudinary a ~6.6 MB (antes 12–18 MB).
-- [ ] Confirmar en iPhone real que el reel ya no se traba con Cloudinary.
+- [x] Bajar el peso del reel: ahora se sirve desde Cloudinary a ~7.6 MB con audio (antes 12–18 MB).
+- [ ] Confirmar en iPhone real que el reel suena estable al salir y volver a la sección (v1).
 
-## Publicación (se verá después)
+## Publicación
+- [x] Publicación temporal en GitHub Pages desde `main`: https://daniel-debug.github.io/DEMO-HELLOROMINA/
+- [ ] Llevar v1 a `main`: push de `development` (con etiquetas), merge a `main`, push de `main`.
 - [ ] Dominio (por ejemplo helloromina.mx).
-- [ ] Hosting: Framer (ella lo usa), Netlify o Vercel.
+- [ ] Hosting definitivo: GitHub Pages con dominio propio, Framer (ella lo usa), Netlify o Vercel.
 - [ ] `og:image` y `canonical` en `build.sh` cuando exista el dominio.
-- [ ] Sacar las fotos del HTML a archivos aparte (`media/`) y cargarlas en WebP.
+- [ ] Sacar las fotos del HTML a archivos aparte (`media/` o Cloudinary) y cargarlas en WebP.
 - [ ] Meta Pixel o Google Analytics.
 - [ ] Probar en iPhone (Safari) y Android (Chrome) reales: historias, reel, sonido, carruseles.

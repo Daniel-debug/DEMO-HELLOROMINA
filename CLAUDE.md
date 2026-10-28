@@ -9,10 +9,23 @@ Landing page de **Hello Romina** (marca personal de Romina Vega, Cajeme / Ciudad
 fotografía, video, historias en tiempo real, reels y diseño para marcas y eventos sociales.
 Es una **propuesta de diseño**: una sola página HTML, sin frameworks, con todo el CSS y JS en el mismo archivo.
 
-- Página publicada (vista previa privada en Claude): https://claude.ai/artifact/WpJELHnkbP97Aa9YshKjpJ
+- Sitio publicado (GitHub Pages, desde `main`): https://daniel-debug.github.io/DEMO-HELLOROMINA/
+- Repositorio (público): https://github.com/Daniel-debug/DEMO-HELLOROMINA
+- Vista previa privada en Claude (artifact): https://claude.ai/artifact/WpJELHnkbP97Aa9YshKjpJ
 - Instagram: https://www.instagram.com/helloromina.mx/
 - Facebook: https://www.facebook.com/p/Hello-Romina-61572056252705/
 - Portafolio de Romina: https://rominavegaportafolio.framer.website/
+
+## Estado actual (actualizar al terminar cada sesión)
+
+- **Versión:** v1 (etiqueta Git `v1`, commit "Agregar número de versión v1").
+- **Rama de trabajo:** `development`. Al 2026-10-28, `development` tiene v1 con las correcciones del audio; **`main` (lo publicado en GitHub Pages) todavía tiene la versión inicial** hasta que el dueño haga push de `development`, merge a `main` y push de `main`.
+- **Pendiente inmediato:** confirmar en un iPhone real que el reel suena estable al salir y volver a "Hello, soy Romina".
+- **Qué leer según la tarea:**
+  - Cambiar textos o datos → `docs/CONTEXTO-MARCA.md` y `docs/DECISIONES.md`.
+  - Cambiar diseño o una sección → `docs/DISENO.md` y `docs/ESTRUCTURA.md`.
+  - Tocar el reel, el audio, las historias o el scroll → **`docs/APRENDIZAJES.md` primero**: ahí están los errores que ya se resolvieron.
+  - Saber qué falta → `docs/PENDIENTES.md`. Qué se hizo → `docs/HISTORIAL.md`.
 
 ## Archivos
 
@@ -25,8 +38,15 @@ Es una **propuesta de diseño**: una sola página HTML, sin frameworks, con todo
 | `media/romina-reel-540.mp4` | Respaldo local sin audio, 540p VP9 (12 MB). Lo usa el visor de Claude, que no carga videos de otros sitios; ahí suena la pista aparte. |
 | `media/romina-reel.mp4` | Mismo reel, 720p H.264 **con audio** (18 MB). Respaldo para iPhone viejos en el sitio real. |
 | `media/romina-reel-audio.mp4` | Solo la pista de audio del reel (500 KB). Suena con el botón / al entrar a la sección. |
-| `docs/` | Contexto detallado: marca, estructura, diseño, pendientes e historial. |
-| `.claude/launch.json` | Configuración para la vista previa local de Claude Code (opcional). |
+| `docs/CONTEXTO-MARCA.md` | Datos reales de Romina, clientes, frases y origen de cada foto. |
+| `docs/DECISIONES.md` | Lo que pidió el cliente y por qué (no deshacer sin preguntar). |
+| `docs/ESTRUCTURA.md` | Secciones, ids y cómo funciona cada comportamiento del JavaScript. |
+| `docs/DISENO.md` | Tokens de color y tipografía, componentes, tamaños de pantalla. |
+| `docs/APRENDIZAJES.md` | Problemas técnicos ya resueltos y trampas conocidas (audio, iPhone, visor de Claude, pruebas). |
+| `docs/PENDIENTES.md` | Lista de lo que falta confirmar, conseguir o publicar. |
+| `docs/HISTORIAL.md` | Registro de cambios por versión. |
+| `README.md` | Resumen corto para personas. |
+| `.gitignore` / `.gitattributes` | Ignora `.claude/` (configuración local); marca los `.mp4` como binarios y `build.sh` con fin de línea LF. |
 
 Las fotos están **incrustadas** en el HTML como `data:` URIs (por eso el archivo pesa ~780 KB).
 
@@ -58,8 +78,8 @@ Las fotos están **incrustadas** en el HTML como `data:` URIs (por eso el archiv
 16b. Si se cambia el reel: subir el original a Cloudinary y usar la URL con `f_auto,q_auto:eco,w_540` (con audio: un solo elemento, sin sincronizar). Dejar los archivos locales como respaldo.
 
 ### Mantener este contexto
-17. **Después de cada cambio**, actualizar `docs/HISTORIAL.md` (qué se cambió y por qué) y, si aplica, `docs/ESTRUCTURA.md`, `docs/DISENO.md` o `docs/PENDIENTES.md`.
-18. Si una regla de este archivo deja de ser cierta, corregirla aquí mismo.
+17. **Después de cada cambio**, actualizar `docs/HISTORIAL.md` (qué se cambió y por qué) y, si aplica, `docs/ESTRUCTURA.md`, `docs/DISENO.md`, `docs/PENDIENTES.md`, `docs/DECISIONES.md` (si el cliente pidió algo) o `docs/APRENDIZAJES.md` (si se resolvió un problema técnico nuevo).
+18. Si una regla de este archivo deja de ser cierta, corregirla aquí mismo. Al terminar una sesión, actualizar la sección **Estado actual**.
 
 ### Git y ramas
 19. Repositorio: https://github.com/Daniel-debug/DEMO-HELLOROMINA (**público**).
@@ -77,16 +97,27 @@ Las fotos están **incrustadas** en el HTML como `data:` URIs (por eso el archiv
 
 ## Cómo probar y publicar
 
+### Probar
 ```bash
 bash build.sh
 ```
 
-Para ver la página con video y audio hace falta un servidor (abrir el archivo con doble clic sirve, pero el video puede no cargar):
+Para ver la página con video y audio hace falta un servidor que soporte rangos (video):
 
 ```bash
 npx http-server -p 5518 -c-1
 ```
 
 Luego abrir `http://localhost:5518/index.html`. En Chrome: F12 → Ctrl+Shift+M para modo celular.
+**No usar `python -m http.server`**: corta la descarga del HTML cuando el video carga al mismo tiempo (ver `docs/APRENDIZAJES.md`).
 
-Publicar el artifact (desde Claude Code): publicar `hello-romina.html` con `url` = el link de arriba y, si cambian, los archivos de `media/` en `files`.
+### Publicar una versión (GitHub Pages)
+1. En `development`: subir la versión (regla 26), `bash build.sh`, anotar en `docs/HISTORIAL.md`, commit y `git tag vN`.
+2. Push de `development` con etiquetas (`git push --tags origin development`).
+3. Merge de `development` en `main` y push de `main`. GitHub Pages se actualiza en 1–2 minutos (pestaña Actions).
+4. Comprobar la versión en el pie de https://daniel-debug.github.io/DEMO-HELLOROMINA/.
+
+En sesiones de Claude Code el push puede estar bloqueado por permisos (repositorio público); en ese caso lo hace el dueño desde SourceTree.
+
+### Vista previa en Claude (artifact)
+Publicar `hello-romina.html` con `url` = el link del artifact y, si cambian, los archivos de `media/` en `files`. El visor bloquea Cloudinary (avisa al publicar; es esperado) y usa los respaldos locales.

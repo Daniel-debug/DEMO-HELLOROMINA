@@ -14,8 +14,8 @@ Actualiza este archivo si agregas, quitas o reordenas secciones.
 | 7 | Clientes | `#clientes` | papel | Post de agradecimiento + 2 espacios para reseñas reales. |
 | 8 | Proceso | `#proceso` | oscuro | Brief → Grabo → Edito → Publico. En celular: línea de tiempo vertical. |
 | 9 | Paquetes | `#paquetes.pkg` | **rosa suave** | Cobertura, Siempre al aire (recomendado, con cinta), Campaña + franja "¿No sabes cuál elegir?". |
-| 10 | Contacto | `#contacto` | oscuro | Texto, enlaces a redes (en celular se ocultan y pasan al pie), formulario que arma un mensaje de WhatsApp. |
-| 11 | Pie | `footer` | oscuro | Logo, redes (solo celular), créditos. |
+| 10 | Contacto | `#contacto` | oscuro | Texto, enlaces a Instagram, Facebook y Portafolio (WhatsApp y correo no se muestran como texto; en celular estos enlaces se ocultan y pasan al pie), formulario que arma un mensaje de WhatsApp. |
+| 11 | Pie | `footer` | oscuro | Logo, redes (`.foot-social`, solo celular), créditos y versión (`.version`, hoy **v1**). |
 | — | Botón flotante | `.wa-float` | verde WhatsApp | En celular es barra inferior: aparece al pasar el inicio y se oculta en contacto. |
 
 ## Comportamientos (JavaScript, al final del archivo)

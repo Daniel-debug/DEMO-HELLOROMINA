@@ -40,6 +40,9 @@ Títulos con `text-wrap: balance`. Etiquetas en mayúsculas con `letter-spacing`
 - **Arco** (`.portrait`): marco del reel, proporción 9:16, esquinas superiores redondas; halo rosa sobre olivo.
 - **Cinta** (`.ribbon`): etiqueta rosa "★ Recomendado".
 - **Pastillas** (`.tags span`, `.ig-link`, `.foot-social a`): borde fino, radio completo.
+- **Botón de sonido** (`.sound-btn`): oscuro translúcido; `.on` rosa ("Silenciar"); `.ask` rosa con pulso ("Toca para escuchar").
+- **Sección con transición** (`.about`): variables `--p` (fondo) y `--pt` (texto) que pone el JavaScript; colores con `color-mix()`.
+- **Versión** (`footer .version`): DM Mono en el pie.
 
 ## Puntos de quiebre
 
