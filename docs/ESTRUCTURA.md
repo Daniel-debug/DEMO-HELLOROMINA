@@ -50,4 +50,4 @@ Los bloques de cada sección aparecen con fundido y desplazamiento suave al entr
 
 La barra rosa fija superior indica el progreso de lectura de la página, de 0 % al inicio a 100 % al final del footer.
 
-El teléfono de historias crece gradualmente hasta 6 % al empezar a bajar. Un borde fijo inferior sigue el fondo de la sección al pie de la pantalla para extender visualmente la landing en Safari.
+El teléfono de historias crece automáticamente un 6 % al cargar y añade hasta dos puntos porcentuales al bajar; al regresar al inicio retira ese extra. Un borde fijo inferior sigue el fondo de la sección al pie de la pantalla para extender visualmente la landing en Safari.

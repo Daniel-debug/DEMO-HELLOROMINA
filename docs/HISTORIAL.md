@@ -2,6 +2,11 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 32
+
+- El teléfono crece automáticamente un 6 % durante 2.4 segundos desde la carga. Al bajar añade hasta dos puntos porcentuales (8 % total); al regresar al inicio retira solo ese extra y conserva el 6 % inicial.
+- Se respeta movimiento reducido. El fondo inferior y la lógica del audio no cambian.
+
 ## 2026-10-28 · Versión 31
 
 - Borde inferior fijo con el tono de la sección visible al pie de la pantalla, incluyendo la transición olivo de Sobre mí y el degradado rosa de Paquetes. Permite que Safari extienda ese fondo hacia su barra; WhatsApp sigue verde.

@@ -64,4 +64,4 @@ Fondo verde WhatsApp y texto blanco, restaurados a petición del usuario. En cel
 
 Barra de lectura superior: 3 px, rosa `--rose`, con brillo sutil, sin capturar toques. Menú móvil: transición de hasta 220 ms sin retraso entre enlaces.
 
-El borde inferior toma el color de la sección que cruza el pie del viewport; es independiente de WhatsApp. El teléfono del inicio escala de 1 a 1.06 con el primer tramo del scroll, anclado a la derecha para evitar desbordamiento. Con movimiento reducido no escala.
+El borde inferior toma el color de la sección que cruza el pie del viewport; es independiente de WhatsApp. El teléfono del inicio escala de 1 a 1.06 automáticamente en 2.4 segundos. El primer tramo del scroll añade hasta 0.02 a la escala (máximo 1.08), que se retira al volver al inicio. Está anclado a la derecha para evitar desbordamiento. Con movimiento reducido no escala.
