@@ -2,6 +2,10 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 36
+
+- Se reorganiza la cabecera de historias: cuenta arriba, «ahora» y «En vivo» alineados en una segunda fila, junto al avatar. La cuenta aprovecha todo el ancho disponible para que no quede comprimida junto a la etiqueta.
+
 ## 2026-10-28 · Versión 35
 
 - Se acelera el fundido entre fotos de las historias de 0.5 a 0.25 segundos; se conserva el tiempo de lectura de cada historia.
