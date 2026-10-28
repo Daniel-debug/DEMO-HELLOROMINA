@@ -23,7 +23,7 @@ cat <<'HEAD'
 <!-- Cuando haya dominio: <meta property="og:image" content="https://helloromina.mx/og.jpg"> y <link rel="canonical" href="https://helloromina.mx/"> -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23efebe4'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='44' fill='%231c1a17'%3Eh%3C/text%3E%3Ccircle cx='48' cy='18' r='5' fill='%23d46a78'/%3E%3C/svg%3E">
 <style>
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html{-webkit-text-size-adjust:100%}
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0}
 img{max-width:100%}

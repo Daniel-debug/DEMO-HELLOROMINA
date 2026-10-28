@@ -2,6 +2,11 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 37
+
+- Se retira «En vivo» de la cabecera de historias. «Ahora» se destaca en una pastilla rosa junto a la cuenta.
+- Al refrescar se elimina el ancla anterior y se vuelve arriba de inmediato, sin restaurar una posición antigua ni animar el recorrido. Los enlaces a secciones conservan desplazamiento suave únicamente al pulsarlos; se respeta movimiento reducido.
+
 ## 2026-10-28 · Versión 36
 
 - Se reorganiza la cabecera de historias: cuenta arriba, «ahora» y «En vivo» alineados en una segunda fila, junto al avatar. La cuenta aprovecha todo el ancho disponible para que no quede comprimida junto a la etiqueta.
