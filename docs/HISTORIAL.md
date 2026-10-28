@@ -2,6 +2,11 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 28
+
+- Indicador de progreso y tiempo reproducido / duración total al pie del reel. Se actualiza desde el mismo video y vuelve al inicio en cada repetición.
+- Se eleva el botón de sonido para no tapar el indicador; no cambia la lógica del audio.
+
 ## 2026-10-28 · Versión 27
 
 - Entradas progresivas al desplazarse para títulos, tarjetas y bloques de todas las secciones; sin ocultar contenido cuando JavaScript o las animaciones no están disponibles.
