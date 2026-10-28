@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 25
+
+- Se elimina la preparación mediante volumen cero: iOS no permite controlar ese volumen y podía sonar fuera de la sección.
+- El toque previo solicita reproducción y la pausa de inmediato en el mismo gesto, sin esperar la promesa; el video queda silenciado. Los eventos de reproducción también lo detienen si la sección no está activa.
+- Al entrar se intenta reproducir con sonido; si Safari lo rechaza, se mantiene la alternativa del botón. Pendiente confirmar autorización automática en Safari real.
+
 ## 2026-10-28 · Versión 24
 
 - El primer toque en cualquier parte prepara el mismo video con audio integrado para reproducirlo con sonido al llegar a la sección. Al entrar se intenta reproducir con sonido; si Safari lo bloquea, continúa silenciado y pide un toque.

@@ -681,7 +681,7 @@ footer .logo .word{font-size:24px;color:var(--night-ink)}
     <a href="https://www.facebook.com/p/Hello-Romina-61572056252705/" target="_blank" rel="noopener">Facebook</a>
     <a href="https://rominavegaportafolio.framer.website/" target="_blank" rel="noopener">Portafolio</a>
   </div>
-  <span>Fotografía · Video · Diseño · Cajeme, Sonora · Propuesta de diseño 2026 · Versión 24</span>
+  <span>Fotografía · Video · Diseño · Cajeme, Sonora · Propuesta de diseño 2026 · Versión 25</span>
 </div></footer>
 
 <a class="wa-float" href="https://wa.me/526441543089?text=Hola%20Romina%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20cotizar." target="_blank" rel="noopener" aria-label="Escribir a Romina por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Escríbeme</span></a>
@@ -716,7 +716,7 @@ footer .logo .word{font-size:24px;color:var(--night-ink)}
   var vid=document.querySelector('.reel-video'),
       sbtn=document.getElementById('sound-btn'), aboutSec=document.getElementById('romina');
   if(vid&&sbtn&&aboutSec){
-    var userMuted=false, inView=false, blocked=false, soundEnabled=false, priming=false;
+    var userMuted=false, inView=false, blocked=false, soundEnabled=false;
     function render(){
       var sound=!vid.muted&&!vid.paused;
       sbtn.classList.toggle('on',sound);
@@ -743,36 +743,36 @@ footer .logo .word{font-size:24px;color:var(--night-ink)}
       playVideo();
       render();
     }
-    // Preparar el mismo video con el primer toque, incluso antes de llegar al reel.
+    // El toque autoriza el reproductor, pero nunca lo deja sonando fuera de la sección.
     function prepareSound(e){
-      if(soundEnabled||priming||userMuted||sbtn.contains(e.target)) return;
+      if(soundEnabled||userMuted||sbtn.contains(e.target)) return;
+      check();
       if(inView){startSound();return;}
-      priming=true;
-      vid.volume=0;
+      soundEnabled=true;
       vid.muted=false;
       var p=vid.play();
-      function prepared(){
-        priming=false;soundEnabled=true;blocked=false;
-        if(!inView) vid.pause();
-        vid.muted=userMuted;
-        vid.volume=1;
-        render();
-      }
-      function failed(){priming=false;vid.muted=true;vid.volume=1;render();}
-      if(p&&p.then) p.then(prepared).catch(failed); else prepared();
+      // Pausar en el mismo gesto, sin esperar a que play() termine de cargar.
+      vid.pause();
+      vid.muted=true;
+      if(p&&p.catch) p.catch(function(){});
+      render();
     }
     ['touchend','click','keydown'].forEach(function(t){document.addEventListener(t,prepareSound);});
     sbtn.addEventListener('click',function(){
       if(!vid.muted){userMuted=true;vid.muted=true;render();}
       else startSound();
     });
-    ['play','playing','pause','volumechange'].forEach(function(t){vid.addEventListener(t,render);});
+    ['play','playing'].forEach(function(t){vid.addEventListener(t,function(){
+      if(!inView){vid.muted=true;vid.pause();}
+      render();
+    });});
+    ['pause','volumechange'].forEach(function(t){vid.addEventListener(t,render);});
     function enter(){
       inView=true;
       vid.muted=userMuted;
       playVideo();
     }
-    function leave(){inView=false;vid.pause();}
+    function leave(){inView=false;vid.muted=true;vid.pause();}
     function check(){
       var r=aboutSec.getBoundingClientRect(), vh=window.innerHeight||document.documentElement.clientHeight;
       var visible=!document.hidden && r.top<vh*0.65 && r.bottom>vh*0.35;

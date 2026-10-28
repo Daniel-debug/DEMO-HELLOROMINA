@@ -28,7 +28,7 @@ Todo está en un solo `<script>` dentro de una función. Bloques en orden:
    - Se reproduce cuando la sección cruza la franja central de la pantalla (35 %–65 %) y se pausa al salir; al volver sigue donde iba.
    - Revisa al hacer scroll y cada 500 ms; se pausa si la pestaña se oculta.
    - Un solo `<video>` reproduce `media/romina-reel.mp4` con su audio integrado; no hay audio separado ni saltos de sincronización.
-   - Regla de navegadores: sin un toque previo no suena. El primer toque en cualquier parte prepara el video integrado para que suene al llegar a la sección; el botón también activa el sonido. Si Safari bloquea la reproducción con sonido al volver, continúa silenciado y muestra "Toca para escuchar".
+   - Regla de navegadores: sin un toque previo no suena. El primer toque solicita reproducción y pausa de inmediato el video integrado dentro del mismo gesto, dejándolo silenciado fuera de la sección. Al llegar se intenta reproducir con sonido; el botón también lo activa. Si Safari bloquea la reproducción con sonido al volver, continúa silenciado y muestra "Toca para escuchar".
    - Si la persona silencia a mano, no se vuelve a activar solo.
 4. **Transición de color de "Sobre mí":** calcula `--p` (0 = crema, 1 = olivo) según la posición; el cambio ocupa ~90 % del alto de pantalla al entrar y al salir. `--pt` cambia el texto de oscuro a claro rápido (entre p 0.45 y 0.6) para que siempre contraste. Si el navegador no soporta `color-mix`, se queda en olivo fijo.
 5. **Historias del teléfono:** 5 fotos que avanzan cada 4 s con barras de progreso; el nombre de la cuenta cambia (`data-who`). Tocar el teléfono pasa a la siguiente. Con movimiento reducido no avanzan solas.
