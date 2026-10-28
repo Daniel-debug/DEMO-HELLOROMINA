@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 31
+
+- Borde inferior fijo con el tono de la sección visible al pie de la pantalla, incluyendo la transición olivo de Sobre mí y el degradado rosa de Paquetes. Permite que Safari extienda ese fondo hacia su barra; WhatsApp sigue verde.
+- El teléfono de historias crece suavemente hasta un 6 % conforme comienza el desplazamiento. Se conserva su rotación y se respeta movimiento reducido.
+- El efecto de la barra nativa necesita comprobarse en Safari real.
+
 ## 2026-10-28 · Versión 30
 
 - El botón fijo de WhatsApp mantiene su verde y dimensiones. Se aplica `backdrop-filter: blur(1px)` (también con prefijo WebKit) para que WebKit clasifique su borde como multicolor en lugar de extender el verde sólido hacia los controles del navegador.

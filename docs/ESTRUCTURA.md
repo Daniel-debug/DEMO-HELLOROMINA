@@ -49,3 +49,5 @@ Todo está en un solo `<script>` dentro de una función. Bloques en orden:
 Los bloques de cada sección aparecen con fundido y desplazamiento suave al entrar en pantalla. La línea de tiempo de `#proceso` avanza según el scroll y activa los pasos; es vertical hasta 640 px y horizontal en escritorio. Con movimiento reducido todo permanece visible sin estas animaciones.
 
 La barra rosa fija superior indica el progreso de lectura de la página, de 0 % al inicio a 100 % al final del footer.
+
+El teléfono de historias crece gradualmente hasta 6 % al empezar a bajar. Un borde fijo inferior sigue el fondo de la sección al pie de la pantalla para extender visualmente la landing en Safari.
