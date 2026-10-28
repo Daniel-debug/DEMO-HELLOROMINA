@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Flujo de ramas
+
+- Se creó la rama `development`; todo el trabajo continúa ahí y `main` solo recibe merges de versiones revisadas.
+- Reglas 19–24 de `CLAUDE.md` (Git y ramas). Motivo: mantener `main` estable y no subir datos privados a un repositorio público.
+- Se retiró el correo de Romina de `docs/CONTEXTO-MARCA.md` y del historial de Git.
+
 ## 2026-10-27 · Propuesta inicial hasta versión 21 del artifact
 
 - **Paquetes destacados:** fondo rosa propio, paquete "Siempre al aire" elevado con cinta "★ Recomendado", franja "¿No sabes cuál elegir?" con WhatsApp, enlace "Paquetes" en el menú. Motivo: que sea el punto de decisión de la página.

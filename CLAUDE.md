@@ -59,6 +59,14 @@ Las fotos están **incrustadas** en el HTML como `data:` URIs (por eso el archiv
 17. **Después de cada cambio**, actualizar `docs/HISTORIAL.md` (qué se cambió y por qué) y, si aplica, `docs/ESTRUCTURA.md`, `docs/DISENO.md` o `docs/PENDIENTES.md`.
 18. Si una regla de este archivo deja de ser cierta, corregirla aquí mismo.
 
+### Git y ramas
+19. Repositorio: https://github.com/Daniel-debug/DEMO-HELLOROMINA (**público**).
+20. **Todo el trabajo se hace en la rama `development`.** No hacer commits directos en `main`.
+21. `main` solo recibe cambios con un **merge desde `development`**, cuando la versión está revisada y lista para publicar.
+22. Antes de empezar, confirmar que estás en `development` (`git status`) y traer lo último (`git pull`).
+23. Un commit por cambio con sentido propio, mensaje en español que diga qué cambió y por qué. Incluir `index.html` regenerado y el `.md` actualizado en el mismo commit.
+24. No subir datos privados (correos, teléfonos personales, contraseñas, llaves). El repositorio es público y lo que entra al historial queda visible.
+
 ## Cómo probar y publicar
 
 ```bash
