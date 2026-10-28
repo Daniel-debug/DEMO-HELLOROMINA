@@ -2,6 +2,11 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 29
+
+- Menú móvil sin retrasos escalonados ni animación de altura: panel y enlaces aparecen juntos con transición de 220 ms mediante opacidad y desplazamiento.
+- Barra superior de progreso de lectura, rosa del token de marca con brillo sutil. Se actualiza al hacer scroll y llega a 100 % al final del footer.
+
 ## 2026-10-28 · Versión 28
 
 - Indicador de progreso y tiempo reproducido / duración total al pie del reel. Se actualiza desde el mismo video y vuelve al inicio en cada repetición.

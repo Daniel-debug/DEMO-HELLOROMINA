@@ -59,5 +59,7 @@ Fondo verde WhatsApp y texto blanco, restaurados a petición del usuario. El col
 ## Movimiento
 
 - Punto rosa que late (en vivo), cinta en movimiento, historias con fundido, transición de color por scroll, pulso del botón "Toca para escuchar".
-- Entradas de elementos al entrar en pantalla, menú móvil desplegable con enlaces escalonados y línea de tiempo que avanza con el scroll.
+- Entradas de elementos al entrar en pantalla, menú móvil desplegable con enlaces simultáneos y línea de tiempo que avanza con el scroll.
 - Todo se desactiva con `prefers-reduced-motion: reduce`.
+
+Barra de lectura superior: 3 px, rosa `--rose`, con brillo sutil, sin capturar toques. Menú móvil: transición de hasta 220 ms sin retraso entre enlaces.

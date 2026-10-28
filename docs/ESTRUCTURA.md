@@ -22,7 +22,7 @@ Actualiza este archivo si agregas, quitas o reordenas secciones.
 
 Todo está en un solo `<script>` dentro de una función. Bloques en orden:
 
-1. **Menú móvil:** abre y cierra `nav.open` con transición y enlaces escalonados; se cierra al elegir un enlace, tocar fuera o presionar Escape. Los enlaces cerrados no reciben foco en móvil.
+1. **Menú móvil:** abre y cierra `nav.open` con transición breve y enlaces simultáneos; se cierra al elegir un enlace, tocar fuera o presionar Escape. Los enlaces cerrados no reciben foco en móvil.
 2. **Formulario → WhatsApp:** arma el texto con nombre, marca, tipo y mensaje y lo pone en el enlace `#wa-send`.
 3. **Reel de "Sobre mí":**
    - Se reproduce cuando la sección cruza la franja central de la pantalla (35 %–65 %) y se pausa al salir; al volver sigue donde iba.
@@ -47,3 +47,5 @@ Todo está en un solo `<script>` dentro de una función. Bloques en orden:
 ## Entradas y proceso
 
 Los bloques de cada sección aparecen con fundido y desplazamiento suave al entrar en pantalla. La línea de tiempo de `#proceso` avanza según el scroll y activa los pasos; es vertical hasta 640 px y horizontal en escritorio. Con movimiento reducido todo permanece visible sin estas animaciones.
+
+La barra rosa fija superior indica el progreso de lectura de la página, de 0 % al inicio a 100 % al final del footer.
