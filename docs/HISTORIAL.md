@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 33
+
+- Nuevo título: «Tu marca en movimiento. Tu historia al momento.».
+- Se conserva el 2 % extra ganado al bajar. Al salir de la sección inicial y regresar se retira suavemente el 6 % de la entrada, manteniendo el extra.
+- Balanceo leve del teléfono al crecer; se respeta movimiento reducido.
+
 ## 2026-10-28 · Versión 32
 
 - El teléfono crece automáticamente un 6 % durante 2.4 segundos desde la carga. Al bajar añade hasta dos puntos porcentuales (8 % total); al regresar al inicio retira solo ese extra y conserva el 6 % inicial.
