@@ -52,6 +52,10 @@ Títulos con `text-wrap: balance`. Etiquetas en mayúsculas con `letter-spacing`
 | 400–640 px | Celulares grandes: teléfono e inicio un poco más grandes. |
 | ≤ 540 px | Ajustes finos (botón flotante, reseñas a 1 columna). |
 
+## Barra flotante de WhatsApp en celular
+
+Fondo crema translúcido (82 % del token `--bg`), desenfoque de 16 px, texto oscuro y borde del token `--line`. Evitar fondos verdes sólidos en esta barra fija por el tinte de los controles de Safari.
+
 ## Movimiento
 
 - Punto rosa que late (en vivo), cinta en movimiento, historias con fundido, transición de color por scroll, pulso del botón "Toca para escuchar".

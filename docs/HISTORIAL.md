@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 26
+
+- La barra flotante de WhatsApp en celular pasa de verde sólido a un fondo crema translúcido con desenfoque y texto oscuro. Se elimina la capa verde que seguía influyendo en el tinte inferior de Safari.
+- La lógica del audio de la versión 25 se conserva sin cambios, confirmada por el usuario.
+- El aspecto de los controles propios de Safari requiere comprobación en el dispositivo.
+
 ## 2026-10-28 · Versión 25
 
 - Se elimina la preparación mediante volumen cero: iOS no permite controlar ese volumen y podía sonar fuera de la sección.
