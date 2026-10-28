@@ -2,6 +2,10 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 22
+
+- Se agrega «Versión 22» al footer para identificar la revisión publicada. La revisión anterior estaba documentada como versión 21, pero no mostraba su número en la página.
+
 ## 2026-10-27 · Propuesta inicial hasta versión 21 del artifact
 
 - **Paquetes destacados:** fondo rosa propio, paquete "Siempre al aire" elevado con cinta "★ Recomendado", franja "¿No sabes cuál elegir?" con WhatsApp, enlace "Paquetes" en el menú. Motivo: que sea el punto de decisión de la página.
