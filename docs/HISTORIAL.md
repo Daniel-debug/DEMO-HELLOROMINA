@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Sonido estable al moverse entre secciones
+
+- **Problema:** al ir y venir entre secciones el audio sonaba muy mal. Cerca del borde la sección se pausaba y reanudaba varias veces, cada vez se reacomodaba la pista aparte, y cambiar su velocidad para sincronizarla distorsionaba el sonido en Safari.
+- **Solución:** el video de Cloudinary ahora trae su propio audio (`f_auto,q_auto:eco,w_540`, ~7.6 MB): un solo elemento, nada que sincronizar. Margen al salir de la sección (entra en 35–65 %, sale fuera de 15–85 %). La pista aparte queda solo para el visor de Claude, sin cambios de velocidad y con saltos limitados. Una interrupción al cargar ya no apaga el sonido.
+- Probado: 8 idas y vueltas en el borde sin pausas; 4 salidas y regresos con sonido estable en el sitio real y en el respaldo (desfase 0.06–0.09 s); el aviso "Toca para escuchar" sigue funcionando. Falta confirmarlo en iPhone real.
+
 ## 2026-10-28 · Reel desde Cloudinary
 
 - El reel se sirve primero desde Cloudinary (`f_auto,q_auto:eco,w_540,ac_none`): H.264 sin audio, ~6.6 MB en lugar de 12–18 MB, desde una CDN de video. Motivo: el video tardaba en cargar en iPhone y eso trababa el audio.

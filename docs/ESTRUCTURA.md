@@ -25,12 +25,13 @@ Todo está en un solo `<script>` dentro de una función. Bloques en orden:
 1. **Menú móvil:** abre y cierra `nav.open`; se cierra al elegir un enlace.
 2. **Formulario → WhatsApp:** arma el texto con nombre, marca, tipo y mensaje y lo pone en el enlace `#wa-send`.
 3. **Reel de "Sobre mí":**
-   - Fuentes en orden: Cloudinary (H.264 sin audio, ~6.6 MB) → `media/romina-reel-540.mp4` (VP9) → `media/romina-reel.mp4` (H.264). Si una no carga, el navegador pasa a la siguiente.
-   - Se reproduce cuando la sección cruza la franja central de la pantalla (35 %–65 %) y se pausa al salir; al volver sigue donde iba.
+   - Fuentes en orden: Cloudinary (H.264 **con audio**, ~7.6 MB) → `media/romina-reel.mp4` (H.264 con audio, 18 MB) → `media/romina-reel-540.mp4` (VP9 sin audio). Si una no carga, el navegador pasa a la siguiente.
+   - **Sitio real:** el video trae su propio audio. Un solo elemento: activar sonido = quitar el silencio del video. No hay nada que sincronizar.
+   - **Visor de Claude:** no carga Cloudinary ni tiene el archivo de 18 MB, así que usa `romina-reel-540` y suena la pista aparte (`#reel-audio`). Se alinea solo con saltos (si se desfasa más de 0.35 s, como máximo uno cada 2 s) y **nunca cambiando la velocidad**, porque en Safari eso distorsiona el sonido. Si el video se detiene a cargar, la pista espera.
+   - Entra al cruzar la franja central de la pantalla (35 %–65 %) y **solo sale cuando se aleja bastante** (fuera de 15 %–85 %). Ese margen evita pausar y reanudar repetidamente cerca del borde. Al volver sigue donde iba.
    - Revisa al hacer scroll y cada 500 ms; se pausa si la pestaña se oculta.
-   - El audio (`#reel-audio`) se sincroniza con el video **sin saltos**: si el desfase pasa de 0.08 s, el audio se acelera o frena hasta 8 %; solo salta si pasa de 1 s (por ejemplo, al reiniciar el video). Saltar seguido traba el audio en iPhone.
-   - Si el video se detiene a cargar (`waiting`), el audio se pausa y retoma alineado cuando el video sigue (`playing`).
-   - Regla de navegadores: sin un toque previo no suena. El primer toque en cualquier parte desbloquea el audio; si sigue bloqueado, el botón dice "Toca para escuchar" con pulso.
+   - Regla de navegadores: sin un toque previo no suena. El primer toque en cualquier parte reproduce el video dentro del toque para dejarlo autorizado (iPhone); si sigue bloqueado, el botón dice "Toca para escuchar" con pulso.
+   - Una interrupción al cargar (`AbortError`) no se trata como bloqueo; solo `NotAllowedError` apaga el sonido.
    - Si la persona silencia a mano, no se vuelve a activar solo.
 4. **Transición de color de "Sobre mí":** calcula `--p` (0 = crema, 1 = olivo) según la posición; el cambio ocupa ~90 % del alto de pantalla al entrar y al salir. `--pt` cambia el texto de oscuro a claro rápido (entre p 0.45 y 0.6) para que siempre contraste. Si el navegador no soporta `color-mix`, se queda en olivo fijo.
 5. **Historias del teléfono:** 5 fotos que avanzan cada 4 s con barras de progreso; el nombre de la cuenta cambia (`data-who`). Tocar el teléfono pasa a la siguiente. Con movimiento reducido no avanzan solas.

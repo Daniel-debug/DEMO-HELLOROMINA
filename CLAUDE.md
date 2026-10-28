@@ -21,8 +21,8 @@ Es una **propuesta de diseño**: una sola página HTML, sin frameworks, con todo
 | `hello-romina.html` | **Fuente única.** Aquí se edita todo. Es también lo que se publica como artifact de Claude. |
 | `index.html` | **Generado** por `build.sh`. Versión independiente para el dominio real (con `<head>`, metas, favicon). No editar a mano. |
 | `build.sh` | Envuelve `hello-romina.html` en un documento completo y genera `index.html`. |
-| Cloudinary | **Fuente principal del reel** en el sitio real: `res.cloudinary.com/dui0ludm/video/upload/f_auto,q_auto:eco,w_540,ac_none/v1793167878/romina-reel_ms0btj.mp4` (H.264 sin audio, ~6.6 MB). Cuenta `dui0ludm`. |
-| `media/romina-reel-540.mp4` | Respaldo local sin audio, 540p VP9 (12 MB). Lo usa el visor de Claude, que no carga videos de otros sitios. |
+| Cloudinary | **Fuente principal del reel** en el sitio real: `res.cloudinary.com/dui0ludm/video/upload/f_auto,q_auto:eco,w_540/v1793167878/romina-reel_ms0btj.mp4` (H.264 **con audio**, ~7.6 MB). Cuenta `dui0ludm`. |
+| `media/romina-reel-540.mp4` | Respaldo local sin audio, 540p VP9 (12 MB). Lo usa el visor de Claude, que no carga videos de otros sitios; ahí suena la pista aparte. |
 | `media/romina-reel.mp4` | Mismo reel, 720p H.264 **con audio** (18 MB). Respaldo para iPhone viejos en el sitio real. |
 | `media/romina-reel-audio.mp4` | Solo la pista de audio del reel (500 KB). Suena con el botón / al entrar a la sección. |
 | `docs/` | Contexto detallado: marca, estructura, diseño, pendientes e historial. |
@@ -55,7 +55,7 @@ Las fotos están **incrustadas** en el HTML como `data:` URIs (por eso el archiv
 ### Video y audio
 15. Los navegadores **no dejan sonar una página sin un toque previo** del usuario (el scroll no cuenta). No intentar saltarse esa regla; el código ya desbloquea el audio con el primer toque y muestra "Toca para escuchar".
 16. El artifact de Claude acepta archivos de hasta **15 MB** y no acepta `.m4a`; por eso el audio va en `.mp4`. Tampoco carga video de otros sitios (Cloudinary), por eso el reel tiene respaldos locales después de la fuente de Cloudinary.
-16b. Si se cambia el reel: subir el original a Cloudinary y usar la URL con `f_auto,q_auto:eco,w_540,ac_none` (el audio va aparte). Dejar los archivos locales como respaldo.
+16b. Si se cambia el reel: subir el original a Cloudinary y usar la URL con `f_auto,q_auto:eco,w_540` (con audio: un solo elemento, sin sincronizar). Dejar los archivos locales como respaldo.
 
 ### Mantener este contexto
 17. **Después de cada cambio**, actualizar `docs/HISTORIAL.md` (qué se cambió y por qué) y, si aplica, `docs/ESTRUCTURA.md`, `docs/DISENO.md` o `docs/PENDIENTES.md`.
