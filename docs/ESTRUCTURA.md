@@ -25,8 +25,8 @@ Todo está en un solo `<script>` dentro de una función. Bloques en orden:
 1. **Menú móvil:** abre y cierra `nav.open` con transición breve y enlaces simultáneos; se cierra al elegir un enlace, tocar fuera o presionar Escape. Los enlaces cerrados no reciben foco en móvil.
 2. **Formulario → WhatsApp:** arma el texto con nombre, marca, tipo y mensaje y lo pone en el enlace `#wa-send`.
 3. **Reel de "Sobre mí":**
-   - Se reproduce cuando la sección cruza la franja central de la pantalla (35 %–65 %) y se pausa al salir; al volver sigue donde iba.
-   - Revisa al hacer scroll y cada 500 ms; se pausa si la pestaña se oculta.
+   - Se reproduce cuando el propio video tiene al menos 20 % de su altura aprovechable visible y se pausa cuando queda menos del 2 %; al volver sigue donde iba. Descuenta el menú y la barra de WhatsApp y usa el viewport visual para adaptarse a distintas pantallas.
+   - Revisa por fotograma al hacer scroll, con IntersectionObserver y al cambiar el viewport visual; se pausa si la pestaña se oculta.
    - Un solo `<video>` reproduce `media/romina-reel.mp4` con su audio integrado; no hay audio separado ni saltos de sincronización.
    - Regla de navegadores: sin un toque previo no suena. El primer toque solicita reproducción y pausa de inmediato el video integrado dentro del mismo gesto, dejándolo silenciado fuera de la sección. Al llegar se intenta reproducir con sonido; el botón también lo activa. Si Safari bloquea la reproducción con sonido al volver, continúa silenciado y muestra "Toca para escuchar".
    - Si la persona silencia a mano, no se vuelve a activar solo.

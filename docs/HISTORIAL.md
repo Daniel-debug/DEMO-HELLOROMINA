@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 39
+
+- La reproducción depende del video visible, no de toda la sección Sobre mí. Se pausa y silencia cuando sale de la zona útil de pantalla, y continúa al regresar sin reiniciar el tiempo.
+- Medición adaptable a la altura real y al viewport visual; descuenta el menú y la barra flotante cuando cubren el video. Arranca con 20 % de la altura aprovechable visible y pausa por debajo del 2 % para evitar cambios por un píxel.
+- Revisión por fotograma de scroll y eventos del viewport, sin la espera previa de 500 ms. Conserva la preferencia manual de silencio.
+
 ## 2026-10-28 · Versión 38
 
 - El refresh conserva la posición mediante la restauración nativa del navegador; ya no borra el ancla ni fuerza volver al inicio. El desplazamiento suave se reserva para los enlaces pulsados, incluido el logo.
