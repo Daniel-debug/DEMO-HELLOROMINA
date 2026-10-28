@@ -54,7 +54,7 @@ Títulos con `text-wrap: balance`. Etiquetas en mayúsculas con `letter-spacing`
 
 ## Barra flotante de WhatsApp en celular
 
-Fondo verde WhatsApp y texto blanco, restaurados a petición del usuario. El color de los controles propios de Safari depende del navegador.
+Fondo verde WhatsApp y texto blanco, restaurados a petición del usuario. En celular se aplica un filtro de fondo mínimo de 1 px para evitar que WebKit extienda el verde sólido a la barra de URL; el fondo opaco mantiene el botón visualmente igual. Pendiente verificar en Safari real.
 
 ## Movimiento
 

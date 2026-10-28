@@ -2,6 +2,13 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 30
+
+- El botón fijo de WhatsApp mantiene su verde y dimensiones. Se aplica `backdrop-filter: blur(1px)` (también con prefijo WebKit) para que WebKit clasifique su borde como multicolor en lugar de extender el verde sólido hacia los controles del navegador.
+- Fundamento: `LocalFrameView::fixedContainerEdges` de WebKit, rama `foundBackdropFilter` → `PredominantColorType::Multiple`.
+- El fondo opaco del botón oculta el filtro, por lo que no debe cambiar su apariencia. Pendiente comprobar el tinte de los controles en Safari de un dispositivo real.
+- Commit autorizado por el usuario; pendiente publicar y comprobar en Safari real.
+
 ## 2026-10-28 · Versión 29
 
 - Menú móvil sin retrasos escalonados ni animación de altura: panel y enlaces aparecen juntos con transición de 220 ms mediante opacidad y desplazamiento.
