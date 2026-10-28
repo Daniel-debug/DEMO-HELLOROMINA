@@ -54,9 +54,10 @@ Títulos con `text-wrap: balance`. Etiquetas en mayúsculas con `letter-spacing`
 
 ## Barra flotante de WhatsApp en celular
 
-Fondo crema translúcido (82 % del token `--bg`), desenfoque de 16 px, texto oscuro y borde del token `--line`. Evitar fondos verdes sólidos en esta barra fija por el tinte de los controles de Safari.
+Fondo verde WhatsApp y texto blanco, restaurados a petición del usuario. El color de los controles propios de Safari depende del navegador.
 
 ## Movimiento
 
 - Punto rosa que late (en vivo), cinta en movimiento, historias con fundido, transición de color por scroll, pulso del botón "Toca para escuchar".
+- Entradas de elementos al entrar en pantalla, menú móvil desplegable con enlaces escalonados y línea de tiempo que avanza con el scroll.
 - Todo se desactiva con `prefers-reduced-motion: reduce`.

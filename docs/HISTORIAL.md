@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 27
+
+- Entradas progresivas al desplazarse para títulos, tarjetas y bloques de todas las secciones; sin ocultar contenido cuando JavaScript o las animaciones no están disponibles.
+- «Del brief al post»: línea de tiempo vinculada al scroll, avance vertical en celular y horizontal en escritorio, con activación progresiva de cada paso.
+- Menú móvil con apertura y cierre animados, enlaces escalonados, cierre con Escape y bloqueo de foco cuando está cerrado.
+- Se restaura el verde de WhatsApp en la barra «Escríbeme», a petición del usuario. La lógica del reel no cambia.
+- Validación en navegador a 360, 390, 430 y 1280 px y preferencia de movimiento reducido.
+
 ## 2026-10-28 · Versión 26
 
 - La barra flotante de WhatsApp en celular pasa de verde sólido a un fondo crema translúcido con desenfoque y texto oscuro. Se elimina la capa verde que seguía influyendo en el tinte inferior de Safari.
