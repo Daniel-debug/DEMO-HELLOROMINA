@@ -2,6 +2,11 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 38
+
+- El refresh conserva la posición mediante la restauración nativa del navegador; ya no borra el ancla ni fuerza volver al inicio. El desplazamiento suave se reserva para los enlaces pulsados, incluido el logo.
+- Entrada inicial escalonada de título, texto, teléfono, servicios y botones, preparada desde el head para evitar mostrarlos primero de golpe. Sin modificar el layout ni animar con movimiento reducido.
+
 ## 2026-10-28 · Versión 37
 
 - Se retira «En vivo» de la cabecera de historias. «Ahora» se destaca en una pastilla rosa junto a la cuenta.
