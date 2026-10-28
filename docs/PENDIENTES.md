@@ -14,7 +14,8 @@ Marca con `[x]` lo que se resuelva y mueve el detalle a `HISTORIAL.md`.
 - [ ] Fotos originales en buena resolución (las actuales son de Instagram a ~640 px).
 - [ ] Fotos de Negai Restaurant y Nieves Toto (solo aparecen en la lista de marcas).
 - [ ] Capturas de sus historias destacadas "Marcas" y "Sociales" para el teléfono del inicio.
-- [ ] Reel recortado a 10–15 s para bajar el peso (hoy 12 MB).
+- [x] Bajar el peso del reel: ahora se sirve desde Cloudinary a ~6.6 MB (antes 12–18 MB).
+- [ ] Confirmar en iPhone real que el reel ya no se traba con Cloudinary.
 
 ## Publicación (se verá después)
 - [ ] Dominio (por ejemplo helloromina.mx).

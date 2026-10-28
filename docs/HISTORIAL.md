@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Reel desde Cloudinary
+
+- El reel se sirve primero desde Cloudinary (`f_auto,q_auto:eco,w_540,ac_none`): H.264 sin audio, ~6.6 MB en lugar de 12–18 MB, desde una CDN de video. Motivo: el video tardaba en cargar en iPhone y eso trababa el audio.
+- Se dejaron los archivos locales como respaldo (el visor de Claude no carga video de otros sitios). El audio sigue aparte en `media/romina-reel-audio.mp4`.
+- Probado: se reproduce desde Cloudinary con el audio alineado (0.05 s) y, si Cloudinary falla, usa el archivo local.
+
 ## 2026-10-28 · Audio trabado en iPhone
 
 - **Problema:** en iPhone (GitHub Pages) el audio del reel se trababa. El video se detenía a cargar mientras el audio seguía; al desfasarse, el código hacía saltar el audio, cada salto en Safari tardaba y generaba otro desfase.

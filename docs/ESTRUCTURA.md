@@ -25,6 +25,7 @@ Todo está en un solo `<script>` dentro de una función. Bloques en orden:
 1. **Menú móvil:** abre y cierra `nav.open`; se cierra al elegir un enlace.
 2. **Formulario → WhatsApp:** arma el texto con nombre, marca, tipo y mensaje y lo pone en el enlace `#wa-send`.
 3. **Reel de "Sobre mí":**
+   - Fuentes en orden: Cloudinary (H.264 sin audio, ~6.6 MB) → `media/romina-reel-540.mp4` (VP9) → `media/romina-reel.mp4` (H.264). Si una no carga, el navegador pasa a la siguiente.
    - Se reproduce cuando la sección cruza la franja central de la pantalla (35 %–65 %) y se pausa al salir; al volver sigue donde iba.
    - Revisa al hacer scroll y cada 500 ms; se pausa si la pestaña se oculta.
    - El audio (`#reel-audio`) se sincroniza con el video **sin saltos**: si el desfase pasa de 0.08 s, el audio se acelera o frena hasta 8 %; solo salta si pasa de 1 s (por ejemplo, al reiniciar el video). Saltar seguido traba el audio en iPhone.
