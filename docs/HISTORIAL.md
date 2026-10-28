@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 24
+
+- El primer toque en cualquier parte prepara el mismo video con audio integrado para reproducirlo con sonido al llegar a la sección. Al entrar se intenta reproducir con sonido; si Safari lo bloquea, continúa silenciado y pide un toque.
+- Se elimina el color de tema forzado y se deja transparente el fondo del enlace fijo de WhatsApp en celular; el verde se dibuja en una capa interior para reducir el tinte de la barra de Safari.
+- Pendiente comprobar autorización de audio y transparencia de la barra en Safari real.
+
 ## 2026-10-28 · Versión 23
 
 - El reel usa el MP4 existente con audio integrado. Se elimina el reproductor de audio separado y las correcciones de posición que podían causar cortes. El sonido se activa con un toque y se conserva la pausa al salir de la sección.

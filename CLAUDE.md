@@ -52,7 +52,7 @@ Las fotos están **incrustadas** en el HTML como `data:` URIs (por eso el archiv
 14. Respetar `prefers-reduced-motion` en animaciones nuevas.
 
 ### Video y audio
-15. Los navegadores **no dejan sonar una página sin un toque previo** del usuario (el scroll no cuenta). No intentar saltarse esa regla; el código activa el audio integrado al tocar en la sección o el botón y muestra "Toca para escuchar" si el navegador lo bloquea.
+15. Los navegadores **no dejan sonar una página sin un toque previo** del usuario (el scroll no cuenta). No intentar saltarse esa regla; el código prepara el video integrado con el primer toque en cualquier parte para que suene al llegar a la sección y muestra "Toca para escuchar" si el navegador lo bloquea.
 16. El artifact de Claude acepta archivos de hasta **15 MB** y no acepta `.m4a`; por eso el audio va en `.mp4`.
 
 ### Mantener este contexto

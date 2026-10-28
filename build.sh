@@ -16,7 +16,6 @@ cat <<'HEAD'
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Hello Romina: fotografía, video, reels e historias en tiempo real para marcas y eventos sociales en Cajeme, Sonora.">
-<meta name="theme-color" content="#efebe4">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:title" content="Hello Romina · photography & content">
