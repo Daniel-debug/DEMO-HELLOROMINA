@@ -132,10 +132,12 @@ nav.open .menu-btn i::after{transform:translateY(-2.75px) rotate(-45deg)}
 .bars span b{display:block;height:100%;background:#fff;transform-origin:left;transform:scaleX(0)}
 .bars span.done b{transform:scaleX(1)}
 .bars span.now b{animation:fill 4s linear forwards}
-.who{position:absolute;top:28px;left:14px;right:14px;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500}
+.who{position:absolute;top:28px;left:14px;right:14px;display:grid;grid-template-columns:30px minmax(0,1fr) auto;align-items:center;gap:7px;font-size:12px;font-weight:500}
 .who .av{width:30px;height:30px;border-radius:50%;background:var(--bg);color:var(--ink);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:15px}
-.who small{font-weight:300;opacity:.8}
-.rec{margin-left:auto;font-family:var(--mono);font-size:10px;background:var(--rose);padding:3px 7px;border-radius:4px;letter-spacing:.1em}
+.who>span:nth-child(2){min-width:0}
+.who-name{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.who small{display:block;font-weight:300;opacity:.8}
+.rec{white-space:nowrap;justify-self:end;font-family:var(--mono);font-size:10px;background:var(--rose);padding:3px 7px;border-radius:4px;letter-spacing:.1em}
 .sticker{position:absolute;left:50%;top:60%;transform:translate(-50%,-50%) rotate(-4deg);background:var(--bg);color:var(--ink);padding:10px 18px;border-radius:12px;white-space:nowrap;text-align:center;line-height:1}
 .sticker span{display:block;font-family:var(--serif);font-style:italic;font-size:26px}
 .sticker small{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.02em}
@@ -696,7 +698,7 @@ footer .logo .word{font-size:24px;color:var(--night-ink)}
     <a href="https://www.facebook.com/p/Hello-Romina-61572056252705/" target="_blank" rel="noopener">Facebook</a>
     <a href="https://rominavegaportafolio.framer.website/" target="_blank" rel="noopener">Portafolio</a>
   </div>
-  <span>Fotografía · Video · Diseño · Cajeme, Sonora · Propuesta de diseño 2026 · Versión 33</span>
+  <span>Fotografía · Video · Diseño · Cajeme, Sonora · Propuesta de diseño 2026 · Versión 34</span>
 </div></footer>
 
 <a class="wa-float" href="https://wa.me/526441543089?text=Hola%20Romina%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20cotizar." target="_blank" rel="noopener" aria-label="Escribir a Romina por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Escríbeme</span></a>

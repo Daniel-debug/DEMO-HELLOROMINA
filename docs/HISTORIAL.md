@@ -2,6 +2,10 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Versión 34
+
+- Cabecera de historias con columnas definidas para avatar, cuenta y etiqueta «En vivo». La etiqueta no se divide en líneas y los nombres largos se recortan con puntos suspensivos para no desplazarla en celular.
+
 ## 2026-10-28 · Versión 33
 
 - Nuevo título: «Tu marca en movimiento. Tu historia al momento.».
