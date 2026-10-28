@@ -27,7 +27,8 @@ Todo está en un solo `<script>` dentro de una función. Bloques en orden:
 3. **Reel de "Sobre mí":**
    - Se reproduce cuando la sección cruza la franja central de la pantalla (35 %–65 %) y se pausa al salir; al volver sigue donde iba.
    - Revisa al hacer scroll y cada 500 ms; se pausa si la pestaña se oculta.
-   - El audio (`#reel-audio`) se sincroniza con el video (corrige si se desfasa más de 0.25 s).
+   - El audio (`#reel-audio`) se sincroniza con el video **sin saltos**: si el desfase pasa de 0.08 s, el audio se acelera o frena hasta 8 %; solo salta si pasa de 1 s (por ejemplo, al reiniciar el video). Saltar seguido traba el audio en iPhone.
+   - Si el video se detiene a cargar (`waiting`), el audio se pausa y retoma alineado cuando el video sigue (`playing`).
    - Regla de navegadores: sin un toque previo no suena. El primer toque en cualquier parte desbloquea el audio; si sigue bloqueado, el botón dice "Toca para escuchar" con pulso.
    - Si la persona silencia a mano, no se vuelve a activar solo.
 4. **Transición de color de "Sobre mí":** calcula `--p` (0 = crema, 1 = olivo) según la posición; el cambio ocupa ~90 % del alto de pantalla al entrar y al salir. `--pt` cambia el texto de oscuro a claro rápido (entre p 0.45 y 0.6) para que siempre contraste. Si el navegador no soporta `color-mix`, se queda en olivo fijo.

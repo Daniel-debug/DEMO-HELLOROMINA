@@ -2,6 +2,12 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## 2026-10-28 · Audio trabado en iPhone
+
+- **Problema:** en iPhone (GitHub Pages) el audio del reel se trababa. El video se detenía a cargar mientras el audio seguía; al desfasarse, el código hacía saltar el audio, cada salto en Safari tardaba y generaba otro desfase.
+- **Solución:** el audio se pausa mientras el video carga y retoma alineado; los desfases chicos se corrigen cambiando la velocidad del audio (±8 %) en vez de saltar; solo salta si el desfase pasa de 1 s.
+- Probado en Chrome simulando desfase de 0.5 s (se corrigió en 5 s sin saltos) y pausa por carga. Falta confirmarlo en un iPhone real.
+
 ## 2026-10-28 · Flujo de ramas
 
 - Se creó la rama `development`; todo el trabajo continúa ahí y `main` solo recibe merges de versiones revisadas.

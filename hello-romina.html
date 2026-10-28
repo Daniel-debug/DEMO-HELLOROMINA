@@ -705,6 +705,7 @@ footer .logo .word{font-size:24px;color:var(--night-ink)}
     }
     function startAudio(){
       aud.currentTime=vid.currentTime;
+      aud.playbackRate=1;
       var p=aud.play();
       if(p&&p.then) p.then(function(){sound=true;blocked=false;render();}).catch(function(){sound=false;blocked=true;render();});
       else {sound=true;render();}
@@ -730,9 +731,21 @@ footer .logo .word{font-size:24px;color:var(--night-ink)}
       if(sound){ userMuted=true; sound=false; aud.pause(); render(); }
       else { userMuted=false; startAudio(); }
     });
-    vid.addEventListener('timeupdate',function(){ if(sound && Math.abs(aud.currentTime-vid.currentTime)>0.25) aud.currentTime=vid.currentTime; });
+    // Sincronía suave: en iPhone cada salto del audio tarda y genera otro desfase (se oye trabado).
+    // Desfases chicos se corrigen acelerando o frenando el audio hasta 8 %; solo se salta si pasa de 1 s (p. ej. al reiniciar el video).
+    function sync(){
+      if(!sound||aud.paused) return;
+      var d=aud.currentTime-vid.currentTime;
+      if(Math.abs(d)>1){ aud.currentTime=vid.currentTime; aud.playbackRate=1; }
+      else if(Math.abs(d)>0.08){ aud.playbackRate=Math.min(1.08,Math.max(0.92,1-d*0.5)); }
+      else if(aud.playbackRate!==1){ aud.playbackRate=1; }
+    }
+    vid.addEventListener('timeupdate',sync);
     vid.addEventListener('pause',function(){ aud.pause(); });
     vid.addEventListener('play',function(){ if(sound) aud.play(); });
+    // Si el video se detiene a cargar, el audio espera y retoma junto con él
+    vid.addEventListener('waiting',function(){ if(sound) aud.pause(); });
+    vid.addEventListener('playing',function(){ if(sound&&inView){ aud.currentTime=vid.currentTime; aud.playbackRate=1; aud.play(); } });
 
     // La sección cuenta como "visible" cuando cruza la franja central de la pantalla (35 % a 65 % del alto).
     // Se revisa al hacer scroll y cada medio segundo; si la pestaña se oculta, todo se pausa.
