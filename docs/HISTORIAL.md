@@ -2,6 +2,11 @@
 
 Lo más reciente arriba. Cada entrada: qué cambió y por qué. La IA debe agregar una entrada después de cada cambio.
 
+## v1 · 2026-10-28 · Primera versión numerada
+
+- Se agregó el número de versión: **v1** en el pie de página y en `<meta name="version">`. Incluye todo lo de abajo (audio sin saltos, reel desde Cloudinary con audio propio, sonido estable al moverse entre secciones).
+- Reglas 25–28 de `CLAUDE.md` para subir la versión en cada publicación.
+
 ## 2026-10-28 · Sonido estable al moverse entre secciones
 
 - **Problema:** al ir y venir entre secciones el audio sonaba muy mal. Cerca del borde la sección se pausaba y reanudaba varias veces, cada vez se reacomodaba la pista aparte, y cambiar su velocidad para sincronizarla distorsionaba el sonido en Safari.

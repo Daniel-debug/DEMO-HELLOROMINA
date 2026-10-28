@@ -69,6 +69,12 @@ Las fotos están **incrustadas** en el HTML como `data:` URIs (por eso el archiv
 23. Un commit por cambio con sentido propio, mensaje en español que diga qué cambió y por qué. Incluir `index.html` regenerado y el `.md` actualizado en el mismo commit.
 24. No subir datos privados (correos, teléfonos personales, contraseñas, llaves). El repositorio es público y lo que entra al historial queda visible.
 
+### Versiones
+25. Versión actual: **v1**. Se muestra en el pie de página (`<span class="version">`) y en `<meta name="version">` al inicio de `hello-romina.html`.
+26. Cada vez que se pasa `development` a `main` para publicar, subir la versión (v2, v3…) en **los dos lugares**, regenerar `index.html` y crear la etiqueta de Git con el mismo nombre (`git tag v2`).
+27. En `docs/HISTORIAL.md`, cada publicación lleva su versión en el título.
+28. Para saber qué versión está publicada: ver el pie de la página o buscar `meta name="version"` en el código de GitHub Pages.
+
 ## Cómo probar y publicar
 
 ```bash
